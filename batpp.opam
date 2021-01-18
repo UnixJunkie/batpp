@@ -1,0 +1,25 @@
+opam-version: "2.0"
+authors: "Francois Berenger"
+maintainer: "unixjunkie@sdf.org"
+homepage: "https://github.com/UnixJunkie/batpp"
+bug-reports: "https://github.com/UnixJunkie/batpp/issues"
+dev-repo: "git+https://github.com/UnixJunkie/batpp.git"
+license: "LGPL w/ linking exception"
+build: ["dune" "build" "-p" name "-j" jobs]
+depends: [
+  "dune" {>= "1.6"}
+  "ocaml"
+]
+synopsis: "Simple source to source preprocessor for OCaml"
+description: """
+Support all pre-processing line-prefix directives in batteries code base:
+##V=VERSION## ... code line ...
+##V<VERSION##
+##V<=VERSION##
+##V>VERSION##
+##V>=VERSION##
+"""
+# url {
+#   src: "https://github.com/UnixJunkie/batpp/archive/XXX.tar.gz"
+#   checksum: "md5=YYY"
+# }
